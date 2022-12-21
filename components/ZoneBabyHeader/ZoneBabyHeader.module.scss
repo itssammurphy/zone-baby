@@ -1,0 +1,29 @@
+.zbHeader {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-weight: 800;
+        font-size: 8rem;
+        position: relative;
+        span {
+            font-size: inherit !important;
+            position: relative;
+            display: inline-block;
+            font-size: 40px;
+            color: #fff;
+            text-transform: uppercase;
+            animation: flip 1.5s forwards;
+            animation-delay: calc(.2s * var(--i))
+        }
+    }
+}
+
+@keyframes flip {
+    0%,80% {
+        transform: rotateY(360deg) 
+    }
+}
