@@ -1,10 +1,13 @@
 @import '../../styles/values.scss';
-.zbHeader {
+.zbLoader {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeOut 1.5s forwards;
+    animation-delay: 3.5s;
+    background-color: $midgray;
 
     h1 {
         font-weight: 800;
@@ -15,7 +18,7 @@
             position: relative;
             display: inline-block;
             font-size: 40px;
-            color: #fff;
+            color: $whitesub;
             text-transform: uppercase;
             animation: flip 1.5s forwards;
             animation-delay: calc(.2s * var(--i))
@@ -26,5 +29,13 @@
 @keyframes flip {
     0%,80% {
         transform: rotateY(360deg) 
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
